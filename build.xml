@@ -176,7 +176,7 @@
         <echo message="Built"/>
     </target>
 
-    <target name="static-analysis" depends="lint,phploc-ci,pdepend,phpmd-ci,phpcs-ci,phpcpd-ci"
+    <target name="static-analysis" depends="lint,pdepend,phpmd-ci,phpcs-ci,phpcpd-ci"
             description="Perform static analysis.">
         <echo message="Done"/>
     </target>
