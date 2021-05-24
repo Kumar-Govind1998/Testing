@@ -118,7 +118,7 @@
             </fileset>
             <report format="noframes" todir="reports/html/" />
         </junitreport>
-
+	</target>
     <target name="static-analysis" depends="lint"
             description="Perform static analysis.">
 			<antcall target="phpunit"/>
