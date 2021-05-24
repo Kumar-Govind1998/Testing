@@ -99,9 +99,6 @@
         <mkdir dir="${basedir}/build/coverage"/>
         <mkdir dir="${basedir}/build/logs"/>
         <mkdir dir="${basedir}/build/phpdox"/>
-		<mkdir dir="reports"/>
-  <mkdir dir="reports/raw"/>
-  <mkdir dir="reports/html/"/>
         <property name="prepare.done" value="true"/>
     </target>
 
@@ -111,18 +108,11 @@
 		
     </target>
 	
-	<target name="test-reports" depends="unittest">
-        <junitreport todir="reports">
-            <fileset dir="reports/raw/">
-                <include name="TEST-*.xml" />
-            </fileset>
-            <report format="noframes" todir="reports/html/" />
-        </junitreport>
-	</target>
+	
+
     <target name="static-analysis" depends="lint"
             description="Perform static analysis.">
 			<antcall target="phpunit"/>
-			<antcall target="test-reports"/>
         <echo message="Done"/>
     </target>
 
