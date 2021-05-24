@@ -3,7 +3,7 @@
 use deepak\Calculator;
 use PHPUnit\Framework\TestCase;
 
-class CalculatorTests extends TestCase
+class CalculatorTest extends TestCase
 {
     private $calculator;
  
