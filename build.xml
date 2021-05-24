@@ -75,7 +75,7 @@
 
 
     <target name="phpunit" unless="phpunit.done" depends="prepare" description="Run unit tests with PHPUnit.">
-        <exec executable="${basedir}/vendor/bin/phpunit.bat" resultproperty="result.phpunit" taskname="phpunit">
+        <exec executable="${basedir}/vendor/bin/phpunit.bat ../../tests --log-junit ../../tests/logs/junit.xml" resultproperty="result.phpunit" taskname="phpunit">
             <arg value="--configuration"/>
             <arg path="${basedir}/tests/phpunit.xml"/>
             <arg path="tests"/>
