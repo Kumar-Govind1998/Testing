@@ -112,15 +112,6 @@
         <echo message="Done"/>
     </target>
 
-    <target name="-check-failure">
-        <fail message="PHPUnit did not finish successfully">
-            <condition>
-                <not>
-                    <equals arg1="${result.phpunit}" arg2="0"/>
-                </not>
-            </condition>
-        </fail>
-        <echo message="Checked failure"/>
-    </target>
+    
 
 </project>
