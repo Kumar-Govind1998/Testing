@@ -29,7 +29,7 @@
         </exec>
     </target>
 
-    <target name="full-build" depends="prepare,composer,static-analysis,phpunit,phpdox,-check-failure"
+    <target name="full-build" depends="prepare,composer,static-analysis,phpunit,phpdox"
             description="Perform static analysis, run tests, and generate project documentation.">
         <echo message="Built"/>
     </target>
