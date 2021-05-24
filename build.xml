@@ -75,9 +75,9 @@
 
 
     <target name="phpunit" unless="phpunit.done" depends="prepare" description="Run unit tests with PHPUnit.">
-        <exec executable="${phpunit}" resultproperty="result.phpunit" taskname="phpunit">
+        <exec executable="${basedir}/vendor/bin/phpunit.bat}" resultproperty="result.phpunit" taskname="phpunit">
             <arg value="--configuration"/>
-            <arg path="${basedir}/build/phpunit.xml"/>
+            <arg path="${basedir}/tests/phpunit.xml"/>
             <arg path="tests"/>
         </exec>
         <property name="phpunit.done" value="true"/>
@@ -105,10 +105,12 @@
     <target name="quick-build" depends="prepare,composer,lint,phpunit-no-coverage"
             description="Perform lint check and run tests without generating code coverage reports.">
         <echo message="Built"/>
+		
     </target>
 
     <target name="static-analysis" depends="lint"
             description="Perform static analysis.">
+			<antcall target="phpunit"/>
         <echo message="Done"/>
     </target>
 
