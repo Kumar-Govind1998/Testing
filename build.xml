@@ -119,7 +119,7 @@
         </exec>
         <property name="phploc.done" value="true"/>
     </target>
-
+<!--
     <target name="phploc-ci" unless="phploc.done" depends="prepare"
             description="Measure project size using PHPLOC and log result in CSV and XML format. Intended for usage within a continuous integration environment.">
         <exec executable="${phploc}" taskname="phploc">
@@ -133,7 +133,7 @@
         </exec>
         <property name="phploc.done" value="true"/>
     </target>
-
+-->
     <target name="phpmd" unless="phpmd.done"
             description="Perform project mess detection using PHPMD and print human readable output. Intended for usage on the command line before committing.">
         <exec executable="${phpmd}" taskname="phpmd">
