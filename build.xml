@@ -85,9 +85,9 @@
 
     <target name="phpunit-no-coverage" unless="phpunit.done" depends="prepare"
             description="Run unit tests with PHPUnit without generating code coverage reports.">
-        <exec executable="${phpunit}" failonerror="true" taskname="phpunit">
+        <exec executable="${basedir}/vendor/bin/phpunit.bat" failonerror="true" taskname="phpunit">
             <arg value="--configuration"/>
-            <arg path="${basedir}/build/phpunit.xml"/>
+            <arg path="${basedir}/tests/phpunit.xml"/>
             <arg path="tests"/>
             <arg value="--no-coverage"/>
         </exec>
