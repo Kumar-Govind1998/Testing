@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<phpunit bootstrap="vendor/autoload.php" colors="true" verbose="true" stopOnFailure="true">
+<phpunit bootstrap="vendor\autoload.php" colors="true" verbose="true" stopOnFailure="true">
 	  <testsuites>
         <testsuite name="Project Test Suite">
             <directory>.</directory>
@@ -7,6 +7,6 @@
     </testsuites>
 <logging>
 
-        <log type="junit" target="logs/junit.xml" logIncompleteSkipped="false"/>
+        <log type="junit" target="logs\junit.xml" logIncompleteSkipped="false"/>
     </logging>
 </phpunit>
