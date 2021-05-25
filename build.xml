@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="php-automate-build-ant" default="full-build">
+<project name="php-automate-build-ant" default="full-build" xmlns:sonar="antlib:org.sonar.ant">
 
     <!-- By default the tools are managed by Composer in ${basedir}/vendor/bin -->
 
