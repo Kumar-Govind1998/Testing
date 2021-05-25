@@ -10,6 +10,10 @@
   
     <property name="phpunit" value="${basedir}/vendor/bin/phpunit"/>
 	
+	
+	<property name="anthome" value="E:\apache-ant-1.9.15-bin\apache-ant-1.9.15"/>
+	
+	
 	<!-- Define the SonarQube global properties (the most usual way is to pass these properties via the command line) -->
 	<property name="sonar.host.url" value="http://localhost:9000" />
 
@@ -123,7 +127,7 @@
 <target name="sonar">
     <taskdef uri="antlib:org.sonar.ant" resource="org/sonar/ant/antlib.xml">
         <!-- Update the following line, or put the "sonarqube-ant-task-*.jar" file in your "$HOME/.ant/lib" folder -->
-        <classpath path="${ANT_HOME}/lib/sonarqube-ant-task-2.5.jar" />
+        <classpath path="${anthome}/lib/sonarqube-ant-task-2.5.jar" />
     </taskdef>
  
     <!-- Execute SonarScanner for Ant Analysis -->
